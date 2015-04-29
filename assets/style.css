@@ -1,0 +1,179 @@
+html, body, section, aside, nav, footer, header {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family:Helvetica, Arial, sans-serif;
+}
+
+aside {
+	float:left;
+	border-right:1px solid gray;
+}
+
+p {
+	font-size:0.9em;
+}
+
+#main_content {
+	/*border-left:1px solid gray;*/
+}
+
+#main_wrapper {
+	margin-top:1em;
+}
+
+#main_nav ul {
+	margin:0;
+	padding:0;
+}
+
+#main_nav > ul > li {
+	list-style-type: none;
+}
+
+.container {
+	padding:0 15px;
+	margin:0 auto;
+}
+
+.container:before, .container:after{
+	display:table;
+	content: " ";
+}
+
+.container:after{
+	clear:both;
+}
+
+.row {
+	margin:0;
+}
+
+.row:before, .row:after{
+	display:table;
+	content: " ";
+}
+
+.row:after{
+	clear:both;
+}
+
+.col-25, .col-75 {
+	min-height:1px;
+	padding:0px 15px;
+	margin:0 0 1em 0;
+	float:left;
+}
+
+.col-25 {
+	width:20%;
+}
+
+.col-75 {
+	width:70%;
+}
+
+.clearfix{
+	clear:both;
+}
+
+ul.portraits {
+	margin:0;
+	padding:0;
+}
+
+ul.portraits li {
+	list-style-type: none;
+}
+
+.portrait-background {
+	min-width:90%;
+	min-height: 200px;
+	padding:5%;
+	background-color:#1a1a1a;
+	color:#fafafa;
+	text-align: center;
+}
+
+.portrait-background img {
+	width:100%
+}
+
+.portrait-background .artist {
+	font-size:0.9em;
+	font-style:italic;
+}
+
+.overlay, .white-overlay{
+	background-color:rgba(0,0,0,0.8);
+	min-height: 100%;
+	min-width:100%;
+	position:absolute;
+	display:none;
+	padding-bottom:5em;
+	z-index: 9999;
+}
+
+.white-overlay{
+	background-color: rgba(255,255,255,0.5);
+	position:fixed;
+}
+
+#modal, #spinner {
+	margin: 0 auto;
+}
+
+#modal img, #spinner img {
+	margin:2em 0;
+}
+
+#modal, #modal img {
+	width:500px;
+	margin-top:10px;
+}
+
+#spinner, #spinner img {
+	width:75px;
+}
+
+#caption {
+	background-color:#1a1a1a;
+	color:#fafafa;
+	min-height:1em;
+	position:absolute;
+	top:0;
+	width:500px;
+	display:none;
+}
+
+#caption h2, #caption p {
+	text-align:center;
+}
+
+.close {
+	float:right;
+	color:#fafafa;
+	background-color: #1a1a1a;
+	border-radius:20px;
+	padding:5px 10px;
+	cursor:pointer;
+	display:none;
+}
+
+.close:after{
+	clear:both;
+}
+
+#prev_page{
+	display:none;
+}
+
+.text-left {
+	float:left;
+}
+
+.text-right{
+	float:right;
+}

@@ -1,0 +1,181 @@
+/* BASIC CSS AND LAYOUT - SKIM THIS SECTION */
+
+html, body, section, aside, nav, footer, header {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family:Helvetica, Arial, sans-serif;
+}
+
+aside {
+	float:left;
+	border-right:1px solid gray;
+}
+
+p {
+	font-size:0.9em;
+}
+
+#main_wrapper {
+	margin-top:1em;
+}
+
+#main_nav ul {
+	margin:0;
+	padding:0;
+}
+
+#main_nav > ul > li {
+	list-style-type: none;
+}
+
+.container {
+	padding:0 15px;
+	margin:0 auto;
+}
+
+.container:before, .container:after{
+	display:table;
+	content: " ";
+}
+
+.container:after{
+	clear:both;
+}
+
+.row {
+	margin:0;
+}
+
+.row:before, .row:after{
+	display:table;
+	content: " ";
+}
+
+.row:after{
+	clear:both;
+}
+
+.col-25, .col-75 {
+	min-height:1px;
+	padding:0px 15px;
+	margin:0 0 1em 0;
+	float:left;
+}
+
+.col-25 {
+	width:20%; /* 20% instead of 25% because padding on the cols adds width to it */
+}
+
+.col-75 {
+	width:70%;
+}
+
+.clearfix{
+	clear:both;
+}
+
+/* 'ART GALLERY' SPECIFIC STYLES - GOES HAND IN HAND W/ JQUERY */
+ul.portraits {
+	margin:0;
+	padding:0;
+}
+
+ul.portraits li {
+	list-style-type: none;
+}
+
+.portrait-background {
+	min-width:90%; /* Leaves room for padding */
+	min-height: 200px;
+	padding:5%;
+	background-color:#1a1a1a;
+	color:#fafafa;
+	text-align: center;
+}
+
+.portrait-background img {
+	width:100%
+}
+
+.portrait-background .artist {
+	font-size:0.9em;
+	font-style:italic;
+}
+
+#prev_page{
+	display:none;
+}
+
+.text-left {
+	float:left;
+}
+
+.text-right{
+	float:right;
+}
+
+.overlay, .white-overlay{ /* Combine these classes since they will share all the same properties except for color and opacity */
+	background-color:rgba(0,0,0,0.8);
+	min-height:100%;
+	min-width:100%;
+	position:absolute; /* Absolute positioning because we want the overlay to float on top of the other elements. Absolute positioning values can be changed regardless of where the element appears in the HTML */
+	display:none; /* Hide for now - we'll show with jQuery */
+	padding-bottom:5em; /* Ensure there will be additional space beneath the modal */
+	z-index:9999; /* Z-index has to do with the 3rd dimension - depth. The higher the z-index, the higher up in the layer stack the element will be. In this case, since we want the overlay to lie on top of the other elements, we're setting the z-index to 9999, one of the higher values. You can think of it similar to Photoshop layers */
+}
+
+.white-overlay {
+	background-color:rgba(255,255,255,0.5);
+}
+
+#modal, #modal img { /* Set for both the 'wrapper' for the modal content and the image to ensure that it will be centered on the page */
+	margin:0 auto;
+	width:500px;
+}
+
+#modal img { /* In class, we put position:relative; here but I don't think we need that */
+	margin-top:10px;
+	margin:2em 0;
+}
+
+#spinner { /* Center the spinner on the page */
+	margin:0 auto;
+}
+
+#spinner img { /* In class, we put position:relative; here but I don't think we need that */
+	margin:2em 0; /* Add top spacing to it */
+}
+
+#spinner, #spinner img {
+	width:75px; /* Set the width of the spinner explicitly so we can center it */
+}
+
+#caption {
+	display:none; /* Hide it for now - we'll make it appear with jQuery */
+	background-color:#1a1a1a;
+	color:#fafafa;
+	min-height:1em; /* Give it some minimum height to ensure it shows no matter what */
+	position:absolute; /* Absolute positioning since it's on top of the other elements */
+	top:0; /* Default top position */
+	width:500px; /* Set the width to the same value as the image's width */
+}
+
+#caption h2, #caption p {
+	text-align: center;
+}
+
+.close {
+	float:right; /* Float the close button to the right hand side of the modal */
+	color:#fafafa;
+	background-color:#1a1a1a;
+	border-radius:20px;
+	padding:5px 10px;
+	cursor:pointer; /* Set your mouse icon to a hand to indicate it's clickable */
+}
+
+.close:after{
+	clear:both; /* Clear your floats after the close class so it won't mess up the styling further down the page */
+}
